@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Stories</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.4rem;
+      color: #0f172a;
+    }
+
+    .lead {
+      color: #475569;
+      margin-bottom: 24px;
+    }
+
+    /* Table styling improves readability and meets the rubric requirements. */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border: 4px solid #2563eb;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      margin-bottom: 38px;
+    }
+
+    th, td {
+      border: 2px solid #60a5fa;
+      padding: 16px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th {
+      background: #dbeafe;
+      color: #0f172a;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #f8fbff;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #eff6ff;
+    }
+
+    .destination-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #7c2d12;
+    }
+
+    /* Image styling adds a hover opacity effect. */
+    .attraction-image {
+      width: 220px;
+      max-width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border: 3px solid #f59e0b;
+      border-radius: 12px;
+      transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .attraction-image:hover {
+      opacity: 0.68;
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .caption {
+      display: block;
+      margin-top: 8px;
+      color: #334155;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .details {
+      display: grid;
+      gap: 22px;
+    }
+
+    .story-card {
+      background: #ffffff;
+      border-left: 8px solid #14b8a6;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      scroll-margin-top: 18px;
+    }
+
+    .story-card:target {
+      outline: 3px solid #f59e0b;
+      background: #fffbeb;
+    }
+
+    .story-card h2 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+
+    .back-link {
+      color: #0f766e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1 id="top">Travel Destinations</h1>
+    <p class="lead">Click an attraction image in the table to jump to a matching travel story at the bottom of the page.</p>
+
+    <!-- Each image is wrapped inside an anchor so it jumps to its related information section. -->
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Attraction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="destination-name">Paris</td>
+          <td>
+            <a href="#eiffel-story">
+              <img class="attraction-image" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%20220%22%3E%0A%20%20%3Crect%20width%3D%22300%22%20height%3D%22220%22%20fill%3D%22%23d9ecff%22/%3E%0A%20%20%3Crect%20y%3D%22160%22%20width%3D%22300%22%20height%3D%2260%22%20fill%3D%22%2387c07a%22/%3E%0A%20%20%3Cpolygon%20points%3D%22150%2C20%20110%2C160%20190%2C160%22%20fill%3D%22%236b4f3a%22/%3E%0A%20%20%3Crect%20x%3D%22142%22%20y%3D%2220%22%20width%3D%2216%22%20height%3D%22140%22%20fill%3D%22%237b5a42%22/%3E%0A%20%20%3Cline%20x1%3D%22125%22%20y1%3D%2270%22%20x2%3D%22175%22%20y2%3D%2270%22%20stroke%3D%22%23c9b18a%22%20stroke-width%3D%224%22/%3E%0A%20%20%3Cline%20x1%3D%22118%22%20y1%3D%2295%22%20x2%3D%22182%22%20y2%3D%2295%22%20stroke%3D%22%23c9b18a%22%20stroke-width%3D%224%22/%3E%0A%20%20%3Cline%20x1%3D%22112%22%20y1%3D%22120%22%20x2%3D%22188%22%20y2%3D%22120%22%20stroke%3D%22%23c9b18a%22%20stroke-width%3D%224%22/%3E%0A%20%20%3Cpath%20d%3D%22M118%20160%20Q150%20120%20182%20160%22%20fill%3D%22none%22%20stroke%3D%22%233b2b1f%22%20stroke-width%3D%228%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22205%22%20font-family%3D%22Arial%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%20fill%3D%22%2323395d%22%3EEiffel%20Tower%3C/text%3E%0A%3C/svg%3E" alt="Illustration of the Eiffel Tower">
+              <span class="caption">Eiffel Tower</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="destination-name">Rome</td>
+          <td>
+            <a href="#colosseum-story">
+              <img class="attraction-image" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%20220%22%3E%0A%20%20%3Crect%20width%3D%22300%22%20height%3D%22220%22%20fill%3D%22%23f7efe1%22/%3E%0A%20%20%3Crect%20y%3D%22170%22%20width%3D%22300%22%20height%3D%2250%22%20fill%3D%22%23d0b48f%22/%3E%0A%20%20%3Cellipse%20cx%3D%22150%22%20cy%3D%22110%22%20rx%3D%2295%22%20ry%3D%2265%22%20fill%3D%22%23c8a97e%22%20stroke%3D%22%238b6b47%22%20stroke-width%3D%226%22/%3E%0A%20%20%3Cellipse%20cx%3D%22150%22%20cy%3D%22110%22%20rx%3D%2255%22%20ry%3D%2235%22%20fill%3D%22%23f7efe1%22%20stroke%3D%22%238b6b47%22%20stroke-width%3D%226%22/%3E%0A%20%20%3Cg%20fill%3D%22%237f5a3b%22%3E%0A%20%20%20%20%3Crect%20x%3D%2272%22%20y%3D%2288%22%20width%3D%2218%22%20height%3D%2238%22%20rx%3D%229%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22102%22%20y%3D%2275%22%20width%3D%2218%22%20height%3D%2250%22%20rx%3D%229%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22132%22%20y%3D%2268%22%20width%3D%2218%22%20height%3D%2257%22%20rx%3D%229%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22162%22%20y%3D%2268%22%20width%3D%2218%22%20height%3D%2257%22%20rx%3D%229%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22192%22%20y%3D%2275%22%20width%3D%2218%22%20height%3D%2250%22%20rx%3D%229%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22222%22%20y%3D%2288%22%20width%3D%2218%22%20height%3D%2238%22%20rx%3D%229%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22205%22%20font-family%3D%22Arial%22%20font-size%3D%2224%22%20text-anchor%3D%22middle%22%20fill%3D%22%235a3f2c%22%3EColosseum%3C/text%3E%0A%3C/svg%3E" alt="Illustration of the Colosseum">
+              <span class="caption">Colosseum</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="destination-name">New York</td>
+          <td>
+            <a href="#liberty-story">
+              <img class="attraction-image" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20300%20220%22%3E%0A%20%20%3Crect%20width%3D%22300%22%20height%3D%22220%22%20fill%3D%22%23dff6ff%22/%3E%0A%20%20%3Crect%20y%3D%22175%22%20width%3D%22300%22%20height%3D%2245%22%20fill%3D%22%237db37d%22/%3E%0A%20%20%3Crect%20x%3D%22110%22%20y%3D%22155%22%20width%3D%2280%22%20height%3D%2220%22%20fill%3D%22%237a7a7a%22/%3E%0A%20%20%3Crect%20x%3D%22125%22%20y%3D%22135%22%20width%3D%2250%22%20height%3D%2220%22%20fill%3D%22%238c8c8c%22/%3E%0A%20%20%3Crect%20x%3D%22140%22%20y%3D%2265%22%20width%3D%2222%22%20height%3D%2270%22%20fill%3D%22%236aa085%22/%3E%0A%20%20%3Crect%20x%3D%22132%22%20y%3D%2290%22%20width%3D%2238%22%20height%3D%2218%22%20fill%3D%22%236aa085%22/%3E%0A%20%20%3Ccircle%20cx%3D%22151%22%20cy%3D%2252%22%20r%3D%2216%22%20fill%3D%22%2378b59b%22/%3E%0A%20%20%3Cpolygon%20points%3D%22151%2C22%20159%2C42%20143%2C42%22%20fill%3D%22%23f4b400%22/%3E%0A%20%20%3Crect%20x%3D%22165%22%20y%3D%2248%22%20width%3D%2210%22%20height%3D%2245%22%20transform%3D%22rotate%28-20%20170%2070%29%22%20fill%3D%22%2378b59b%22/%3E%0A%20%20%3Crect%20x%3D%22178%22%20y%3D%2218%22%20width%3D%226%22%20height%3D%2238%22%20fill%3D%22%236b4b2a%22/%3E%0A%20%20%3Cpolygon%20points%3D%22181%2C14%20172%2C25%20190%2C25%22%20fill%3D%22%23ffcc4d%22/%3E%0A%20%20%3Ctext%20x%3D%22150%22%20y%3D%22205%22%20font-family%3D%22Arial%22%20font-size%3D%2222%22%20text-anchor%3D%22middle%22%20fill%3D%22%232a5674%22%3EStatue%20of%20Liberty%3C/text%3E%0A%3C/svg%3E" alt="Illustration of the Statue of Liberty">
+              <span class="caption">Statue of Liberty</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Travel story sections provide the information reached by clicking each image. -->
+    <div class="details">
+      <section id="eiffel-story" class="story-card">
+        <h2>Paris - Eiffel Tower</h2>
+        <p>The Eiffel Tower is one of the most recognizable landmarks in the world. It offers incredible city views, especially at sunset, and it is a perfect stop for visitors interested in architecture, photography, and French culture.</p>
+        <a class="back-link" href="#top">Back to table</a>
+      </section>
+
+      <section id="colosseum-story" class="story-card">
+        <h2>Rome - Colosseum</h2>
+        <p>The Colosseum reflects the engineering skill of ancient Rome. Travelers often visit it to learn about Roman history, gladiator contests, and the importance of the empire in shaping European civilization.</p>
+        <a class="back-link" href="#top">Back to table</a>
+      </section>
+
+      <section id="liberty-story" class="story-card">
+        <h2>New York - Statue of Liberty</h2>
+        <p>The Statue of Liberty symbolizes freedom and opportunity. It remains one of New York City's most popular attractions and is closely connected with the history of immigration in the United States.</p>
+        <a class="back-link" href="#top">Back to table</a>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

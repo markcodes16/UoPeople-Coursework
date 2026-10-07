@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Purpose: This XML Schema defines the allowed structure for the bookstore catalog.
+  It requires a catalog root element and one or more book elements.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/bookstore/catalog"
+           xmlns:bk="http://example.com/bookstore/catalog"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <!-- Root element for the complete online bookstore catalog. -->
+  <xs:element name="catalog">
+    <xs:complexType>
+      <xs:sequence>
+
+        <!-- Each book has a required string id and required boolean availability flag. -->
+        <xs:element name="book" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+
+              <!--
+                The title element stores the book title as a string value in name
+                and nests publicationYear as an integer to match the assignment structure.
+              -->
+              <xs:element name="title">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="publicationYear" type="xs:integer"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+              <!-- Author is modeled as a complex element so first and last names are searchable fields. -->
+              <xs:element name="author">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="firstName" type="xs:string"/>
+                    <xs:element name="lastName" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="available" type="xs:boolean" use="required"/>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

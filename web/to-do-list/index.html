@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List Application</title>
+ 
+  <style>
+    /* The page styling creates a clean layout that is easy for users to read and use. */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 30px;
+    }
+ 
+    /* This container keeps the to-do list content centered and visually organized. */
+    .todo-container {
+      background-color: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+ 
+    h1 {
+      margin-top: 0;
+      font-size: 36px;
+      color: #000;
+    }
+ 
+    /* The input section places the text box and Add Task button on the same row. */
+    .input-area {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+ 
+    #taskInput {
+      flex: 1;
+      padding: 12px;
+      font-size: 18px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+ 
+    #addTaskButton {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+ 
+    #addTaskButton:hover {
+      background-color: #3e8e41;
+    }
+ 
+    #taskList {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+ 
+    /* Each list item is styled as one task row with controls below it. */
+    .task-item {
+      margin-bottom: 14px;
+    }
+ 
+    .task-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+ 
+    .task-text {
+      color: #222;
+    }
+ 
+    /* This class gives completed tasks a strike-through effect. */
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+ 
+    .button-area {
+      margin-left: 6px;
+    }
+ 
+    .edit-button,
+    .remove-button {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 6px;
+    }
+ 
+    .edit-button:hover,
+    .remove-button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+ 
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Enter new task" />
+      <button id="addTaskButton">Add Task</button>
+    </div>
+ 
+    <ul id="taskList"></ul>
+  </div>
+ 
+  <script>
+    // These variables store the main DOM elements that the program needs to update.
+    const taskInput = document.getElementById("taskInput");
+    const addTaskButton = document.getElementById("addTaskButton");
+    const taskList = document.getElementById("taskList");
+ 
+    // This function creates a new task item and adds it to the list.
+    function addTask() {
+      const taskText = taskInput.value.trim();
+ 
+      // This validation prevents blank tasks from being added to the application.
+      if (taskText === "") {
+        alert("Please enter a task.");
+        return;
+      }
+ 
+      const taskItem = document.createElement("li");
+      taskItem.className = "task-item";
+ 
+      // The task item includes a checkbox, task text, Edit button, and Remove button.
+      taskItem.innerHTML = `
+        <div class="task-content">
+          <input type="checkbox" class="complete-checkbox">
+          <span class="task-text">${taskText}</span>
+        </div>
+        <div class="button-area">
+          <button class="edit-button">Edit</button>
+          <button class="remove-button">Remove</button>
+        </div>
+      `;
+ 
+      taskList.appendChild(taskItem);
+ 
+      // This clears the input box so the user can quickly type another task.
+      taskInput.value = "";
+      taskInput.focus();
+    }
+ 
+    // This event listener allows the user to add a task by clicking the Add Task button.
+    addTaskButton.addEventListener("click", addTask);
+ 
+    // This event listener allows the user to press Enter instead of clicking the button.
+    taskInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        addTask();
+      }
+    });
+ 
+    // Event delegation is used here so one listener can manage edit, remove, and checkbox actions.
+    taskList.addEventListener("click", function(event) {
+      const selectedElement = event.target;
+      const taskItem = selectedElement.closest(".task-item");
+ 
+      if (!taskItem) {
+        return;
+      }
+ 
+      const taskTextElement = taskItem.querySelector(".task-text");
+ 
+      // This removes the selected task from the DOM when the Remove button is clicked.
+      if (selectedElement.classList.contains("remove-button")) {
+        taskItem.remove();
+      }
+ 
+      // This opens a dialog box so the user can edit an existing task.
+      if (selectedElement.classList.contains("edit-button")) {
+        const updatedTaskText = prompt("Edit task:", taskTextElement.textContent);
+ 
+        // This keeps the old task if the user presses Cancel or enters only spaces.
+        if (updatedTaskText !== null && updatedTaskText.trim() !== "") {
+          taskTextElement.textContent = updatedTaskText.trim();
+        }
+      }
+ 
+      // This marks the task complete or incomplete by updating its visual style.
+      if (selectedElement.classList.contains("complete-checkbox")) {
+        taskTextElement.classList.toggle("completed", selectedElement.checked);
+      }
+    });
+  </script>
+</body>
+</html>

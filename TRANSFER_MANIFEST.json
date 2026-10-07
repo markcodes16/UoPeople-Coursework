@@ -1,0 +1,433 @@
+{
+  "format_version": 1,
+  "transferred_on": "2026-10-07",
+  "source_snapshot": "eec0291d007813570382fb3a6fc2f93f44cd6a90",
+  "source_prefix": "school-projects/",
+  "project_count": 14,
+  "source_and_data_file_count": 46,
+  "project_readme_count": 14,
+  "verification": "Unchanged files must retain their original Git blob SHA. README edits remove private links and clarify exclusions; application execution is not verified.",
+  "excluded": "submission.txt, private recovery metadata, personal documents and credentials",
+  "files": [
+    {
+      "original_path": "school-projects/java/employee-data-processor/README.md",
+      "path": "java/employee-data-processor/README.md",
+      "original_git_blob_sha": "cf2d16496346f8d5d691277e56857793964966a1",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/employee-data-processor/src/Employee.java",
+      "path": "java/employee-data-processor/src/Employee.java",
+      "original_git_blob_sha": "1fb5ca6bfd32346d5a502349842c933694be1f52",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/employee-data-processor/src/EmployeeDataProcessorGUI.java",
+      "path": "java/employee-data-processor/src/EmployeeDataProcessorGUI.java",
+      "original_git_blob_sha": "5327ee8c444a26402df3bb449ef1f67c1e4994e6",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/employee-data-processor/src/EmployeeService.java",
+      "path": "java/employee-data-processor/src/EmployeeService.java",
+      "original_git_blob_sha": "3fd6f9cf06655df1cd77042ceeb9aee49770057e",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/library-management/README.md",
+      "path": "java/library-management/README.md",
+      "original_git_blob_sha": "dfbbfe6f5659bb818f001f6f4036cd8902e4f31c",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/library-management/src/books.java",
+      "path": "java/library-management/src/books.java",
+      "original_git_blob_sha": "477609355351f07ea366d3dc0c1b1162b8e8de67",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/multithreaded-clock/README.md",
+      "path": "java/multithreaded-clock/README.md",
+      "original_git_blob_sha": "2a3727dcd6db3ce8fac178dfdc7efdcad347d83f",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/multithreaded-clock/src/com/clock/Clock.java",
+      "path": "java/multithreaded-clock/src/com/clock/Clock.java",
+      "original_git_blob_sha": "1420d9d2bfcf37e5c48fa2fc6e59c1835cda4dd7",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/multithreaded-clock/src/com/clock/ClockApplication.java",
+      "path": "java/multithreaded-clock/src/com/clock/ClockApplication.java",
+      "original_git_blob_sha": "cee6418150de848151b05464fd9bb45c4a82f932",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/multithreaded-clock/src/com/clock/TimeDisplayer.java",
+      "path": "java/multithreaded-clock/src/com/clock/TimeDisplayer.java",
+      "original_git_blob_sha": "aebb1bdef906af74b6dfc08087edb484b89b5bee",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/multithreaded-clock/src/com/clock/TimeUpdater.java",
+      "path": "java/multithreaded-clock/src/com/clock/TimeUpdater.java",
+      "original_git_blob_sha": "09d57526bd13e7eeb46483d6c406372d36fbc754",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/quiz/README.md",
+      "path": "java/quiz/README.md",
+      "original_git_blob_sha": "e9e4df7c85a84abbb0f94d6e799a6f5933f76b18",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/quiz/src/quiz.java",
+      "path": "java/quiz/src/quiz.java",
+      "original_git_blob_sha": "1cf638ad2654096c7d9621e2bbc97c057a3a60d5",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/stock-price-analysis/README.md",
+      "path": "java/stock-price-analysis/README.md",
+      "original_git_blob_sha": "90f4e81fd13a5609e1ba6469431e4038c55fc779",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/stock-price-analysis/src/main.java",
+      "path": "java/stock-price-analysis/src/main.java",
+      "original_git_blob_sha": "f2b415dda0aad08c7ffa87e4304f5538a8c65474",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-course-cli/README.md",
+      "path": "java/student-course-cli/README.md",
+      "original_git_blob_sha": "7cb6da96d9c7d9c6e9ec8d437637965bfa20b70b",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/student-course-cli/src/Course.java",
+      "path": "java/student-course-cli/src/Course.java",
+      "original_git_blob_sha": "679a8ce5df0dc6fe1e5ca8f4a4b10e261d0a20e7",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-course-cli/src/CourseManagement.java",
+      "path": "java/student-course-cli/src/CourseManagement.java",
+      "original_git_blob_sha": "da46d0929a904f782ae335986a298ebd4e0b96a8",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-course-cli/src/Main.java",
+      "path": "java/student-course-cli/src/Main.java",
+      "original_git_blob_sha": "f0dfba8d968e706bae96823be74d31da8d9838f4",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-course-cli/src/Student.java",
+      "path": "java/student-course-cli/src/Student.java",
+      "original_git_blob_sha": "af0553aeaffbe2ecdee59fa83dc1b1386ae16cad",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-management-gui/README.md",
+      "path": "java/student-management-gui/README.md",
+      "original_git_blob_sha": "f8fbf19b19b3b383cfdd5670bbca2e963837cb62",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/student-management-gui/src/Course.java",
+      "path": "java/student-management-gui/src/Course.java",
+      "original_git_blob_sha": "d578ad2a04e94f363a563f2cd9f9afe0f5cb47d6",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-management-gui/src/Student.java",
+      "path": "java/student-management-gui/src/Student.java",
+      "original_git_blob_sha": "fa78ba07225ca962e904a9b74be47351045d9f46",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/student-management-gui/src/StudentManagementGUI.java",
+      "path": "java/student-management-gui/src/StudentManagementGUI.java",
+      "original_git_blob_sha": "be9d6abd77785af106666c1accb844f610c9344c",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/text-analysis/README.md",
+      "path": "java/text-analysis/README.md",
+      "original_git_blob_sha": "213304c8c5cc8c142e9c9ae13b924c934518d3a0",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/text-analysis/src/TextAnalysisTool.java",
+      "path": "java/text-analysis/src/TextAnalysisTool.java",
+      "original_git_blob_sha": "054e6aac6bd3d3e8d15e50960e13bd3ca396cb3d",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/README.md",
+      "path": "java/vehicle-interfaces/README.md",
+      "original_git_blob_sha": "1f4f6bc79412fd52f58bd63a963df6864071dda8",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/app/VehicleApp.java",
+      "path": "java/vehicle-interfaces/src/vehicle/app/VehicleApp.java",
+      "original_git_blob_sha": "f4841a0be90a3ca0ac138c0f9df29ad8fc075c32",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/interfaces/CarVehicle.java",
+      "path": "java/vehicle-interfaces/src/vehicle/interfaces/CarVehicle.java",
+      "original_git_blob_sha": "b189612077bc34fcf6e8d6e9109899ed9f3d3fad",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/interfaces/MotorVehicle.java",
+      "path": "java/vehicle-interfaces/src/vehicle/interfaces/MotorVehicle.java",
+      "original_git_blob_sha": "fa644344f77feaca13da20157c251123f368deca",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/interfaces/TruckVehicle.java",
+      "path": "java/vehicle-interfaces/src/vehicle/interfaces/TruckVehicle.java",
+      "original_git_blob_sha": "bdf9245f2f405a305f0d421a2328e8ec0352dc7c",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/interfaces/Vehicle.java",
+      "path": "java/vehicle-interfaces/src/vehicle/interfaces/Vehicle.java",
+      "original_git_blob_sha": "61784a09eeaa3c97f26873891a2e31f248b297b2",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/model/Car.java",
+      "path": "java/vehicle-interfaces/src/vehicle/model/Car.java",
+      "original_git_blob_sha": "a6fa4eedc3d4baf0e02d3e9b9f85f0d55938ee3f",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/model/Motorcycle.java",
+      "path": "java/vehicle-interfaces/src/vehicle/model/Motorcycle.java",
+      "original_git_blob_sha": "d8710c7f035a5f0368a99e59f353e5546d2945ba",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/vehicle-interfaces/src/vehicle/model/Truck.java",
+      "path": "java/vehicle-interfaces/src/vehicle/model/Truck.java",
+      "original_git_blob_sha": "5ff4dab20b646d9fbaf5ec49a635e0d68a8b44ec",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/README.md",
+      "path": "java/weather-app/README.md",
+      "original_git_blob_sha": "d134089119c8fe9a9443d672c41123ad861f04ee",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/MainApp.java",
+      "path": "java/weather-app/src/com/example/weatherapp/MainApp.java",
+      "original_git_blob_sha": "f00251d6130949c2d32ca857fe5643395e9a746d",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/WeatherAppController.java",
+      "path": "java/weather-app/src/com/example/weatherapp/WeatherAppController.java",
+      "original_git_blob_sha": "6194d4cd1215493c2adc916d615769c658cdc255",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/CurrentWeather.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/CurrentWeather.java",
+      "original_git_blob_sha": "d74876c2584e10350dd8e3f9613a40d1c8572f83",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/DailyForecast.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/DailyForecast.java",
+      "original_git_blob_sha": "2784f5bff87b5099f6e9525795463f432511aeac",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/ForecastItem.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/ForecastItem.java",
+      "original_git_blob_sha": "4e5a3437211153b29e8a84641e89fa66b8d5565d",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/GeoLocation.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/GeoLocation.java",
+      "original_git_blob_sha": "90f97244e035d200cd3411dd4b964cbbf383a986",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/SearchHistoryEntry.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/SearchHistoryEntry.java",
+      "original_git_blob_sha": "17247912f96ac20f7c41b7f0cd5b997efd557ea1",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/Units.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/Units.java",
+      "original_git_blob_sha": "2539dd37b81847715c1cc34ab9cdb0059cbbc7ff",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/model/WeatherReport.java",
+      "path": "java/weather-app/src/com/example/weatherapp/model/WeatherReport.java",
+      "original_git_blob_sha": "770265d36e11a6851bc9f372cee24aa479c9d489",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/service/HistoryStore.java",
+      "path": "java/weather-app/src/com/example/weatherapp/service/HistoryStore.java",
+      "original_git_blob_sha": "4fe3f4bb454edea1684203a475b14b75da426666",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/java/weather-app/src/com/example/weatherapp/service/OpenWeatherMapClient.java",
+      "path": "java/weather-app/src/com/example/weatherapp/service/OpenWeatherMapClient.java",
+      "original_git_blob_sha": "d14b2739976cf479aa9133f96b4be8b567083187",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/bookstore-data-interchange/README.md",
+      "path": "web/bookstore-data-interchange/README.md",
+      "original_git_blob_sha": "f853afe1341536f9cf8252becfe9c2f67900e817",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/web/bookstore-data-interchange/catalog.json",
+      "path": "web/bookstore-data-interchange/catalog.json",
+      "original_git_blob_sha": "6112c6728f3850230716cbbce36e2fd58a90fb91",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/bookstore-data-interchange/catalog.xml",
+      "path": "web/bookstore-data-interchange/catalog.xml",
+      "original_git_blob_sha": "7f5ce17ee32c8ff47e8a2ae304fb69bf9ffec649",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/bookstore-data-interchange/catalog.xsd",
+      "path": "web/bookstore-data-interchange/catalog.xsd",
+      "original_git_blob_sha": "50c7b6101b496b850bddc3b7613ba061e2fdca1e",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/bookstore-data-interchange/index.html",
+      "path": "web/bookstore-data-interchange/index.html",
+      "original_git_blob_sha": "a1d34c65483c74dd513b48c47ab3ace3af14a47c",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/temperature-converter/README.md",
+      "path": "web/temperature-converter/README.md",
+      "original_git_blob_sha": "63d3e55df750cabc48a3d3301d9437ebb5ecc1d0",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/web/temperature-converter/index.html",
+      "path": "web/temperature-converter/index.html",
+      "original_git_blob_sha": "603833e120459dd78eb5b4017434c14c07e4b8ca",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/to-do-list/README.md",
+      "path": "web/to-do-list/README.md",
+      "original_git_blob_sha": "94f8b6c263d9fbb14271de1de9a041d18bb29209",
+      "content_preserved": false,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/web/to-do-list/index.html",
+      "path": "web/to-do-list/index.html",
+      "original_git_blob_sha": "0b7d9c2db0b61a9f3bb27cda9c2ee5c6c6e8e995",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/travel-blog/README.md",
+      "path": "web/travel-blog/README.md",
+      "original_git_blob_sha": "4ca8851a2aae02dc3f36a5a6b56155f6d4cc4842",
+      "content_preserved": true,
+      "kind": "documentation"
+    },
+    {
+      "original_path": "school-projects/web/travel-blog/archive/travel_stories-earlier.html",
+      "path": "web/travel-blog/archive/travel_stories-earlier.html",
+      "original_git_blob_sha": "2e22c4b3e4058caed2bbaad5e08170b559049f78",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/travel-blog/travel_blog_homepage.html",
+      "path": "web/travel-blog/travel_blog_homepage.html",
+      "original_git_blob_sha": "8cd0dfd99128aacc5cefd9bb9d1504d9a0df9f2b",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    },
+    {
+      "original_path": "school-projects/web/travel-blog/travel_stories.html",
+      "path": "web/travel-blog/travel_stories.html",
+      "original_git_blob_sha": "a5d29844053a3dbd41d25ae532efecbe568954d4",
+      "content_preserved": true,
+      "kind": "source_or_data"
+    }
+  ]
+}

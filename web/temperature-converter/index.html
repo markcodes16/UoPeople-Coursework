@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        /* The page styles create a clean centered layout that resembles the assignment example. */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* The converter card keeps all form controls grouped in one readable area. */
+        .converter-card {
+            width: 90%;
+            max-width: 650px;
+            background-color: #ffffff;
+            padding: 36px 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+        }
+        h1 {
+            margin: 10px 0 34px;
+            text-align: center;
+            font-size: 38px;
+            color: #000000;
+        }
+        /* Shared form-control styling keeps the input, select, and button aligned. */
+        input,
+        select,
+        button {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 24px;
+            padding: 13px 16px;
+            border-radius: 6px;
+            font-size: 18px;
+        }
+        input,
+        select {
+            border: 1px solid #cfcfcf;
+            background-color: #ffffff;
+        }
+        /* The button color is intentionally strong so users can easily identify the action. */
+        button {
+            border: none;
+            background-color: #0d82f3;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #066fd1;
+        }
+        /* Separate result and error areas make successful output and validation feedback clear. */
+        #resultMessage,
+        #errorMessage {
+            min-height: 28px;
+            text-align: center;
+            font-size: 22px;
+        }
+        #errorMessage {
+            color: #b00020;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <main class="converter-card">
+        <h1>Temperature Converter</h1>
+        <!-- The input allows the user to type a temperature value before conversion. -->
+        <input
+            type="text"
+            id="temperatureInput"
+            inputmode="decimal"
+            placeholder="Enter temperature"
+            aria-label="Temperature value"
+        >
+        <!-- The dropdown lets the user choose which conversion formula should be applied. -->
+        <select id="conversionChoice" aria-label="Conversion type">
+            <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+            <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
+        </select>
+        <!-- The button starts the conversion through a JavaScript event listener. -->
+        <button id="convertButton" type="button">Convert</button>
+        <!-- The result and error areas are updated dynamically with JavaScript. -->
+        <p id="resultMessage" aria-live="polite"></p>
+        <p id="errorMessage" aria-live="polite"></p>
+    </main>
+    <script>
+        // These variables store references to the HTML elements that JavaScript will update.
+        const temperatureInput = document.getElementById("temperatureInput");
+        const conversionChoice = document.getElementById("conversionChoice");
+        const convertButton = document.getElementById("convertButton");
+        const resultMessage = document.getElementById("resultMessage");
+        const errorMessage = document.getElementById("errorMessage");
+        // This function applies the Celsius-to-Fahrenheit formula from the assignment.
+        function convertCelsiusToFahrenheit(celsiusValue) {
+            return (9 / 5) * celsiusValue + 32;
+        }
+        // This function applies the Fahrenheit-to-Celsius formula from the assignment.
+        function convertFahrenheitToCelsius(fahrenheitValue) {
+            return (5 / 9) * (fahrenheitValue - 32);
+        }
+        // This function validates the input and displays the correct conversion result.
+        function convertTemperature() {
+            const enteredValue = temperatureInput.value.trim();
+            const numericTemperature = Number(enteredValue);
+            const selectedConversion = conversionChoice.value;
+            // The if statement prevents empty or non-numeric input from being converted.
+            if (enteredValue === "" || !Number.isFinite(numericTemperature)) {
+                resultMessage.textContent = "";
+                errorMessage.textContent = "Please enter a numeric temperature value.";
+                return;
+            }
+            // This clears older error text once the user enters a valid number.
+            errorMessage.textContent = "";
+            // This control structure chooses the correct formula based on the dropdown selection.
+            if (selectedConversion === "celsiusToFahrenheit") {
+                const fahrenheitResult = convertCelsiusToFahrenheit(numericTemperature);
+                resultMessage.textContent = `${numericTemperature} °C is ${fahrenheitResult.toFixed(2)} °F`;
+            } else if (selectedConversion === "fahrenheitToCelsius") {
+                const celsiusResult = convertFahrenheitToCelsius(numericTemperature);
+                resultMessage.textContent = `${numericTemperature} °F is ${celsiusResult.toFixed(2)} °C`;
+            }
+        }
+        // The click event listener captures the user's action and runs the conversion dynamically.
+        convertButton.addEventListener("click", convertTemperature);
+        // The Enter key listener improves usability by allowing keyboard-based conversion.
+        temperatureInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                convertTemperature();
+            }
+        });
+        // This event updates the result immediately if the user changes the dropdown after converting.
+        conversionChoice.addEventListener("change", function () {
+            if (resultMessage.textContent !== "" || errorMessage.textContent !== "") {
+                convertTemperature();
+            }
+        });
+    </script>
+</body>
+</html>

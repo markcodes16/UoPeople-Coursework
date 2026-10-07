@@ -1,0 +1,21 @@
+# Private submissions and local credentials
+submission.txt
+.env
+.env.*
+!.env.example
+credentials.json
+secrets.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Build outputs and local tooling
+*.class
+out/
+target/
+build/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

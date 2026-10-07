@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookstore Inventory</title>
+  <style>
+    /* Purpose: Keep the page simple so the JSON output is easy to read and resembles the assignment figure. */
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      margin: 24px;
+      color: #111;
+      background-color: #fff;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 28px;
+    }
+
+    ul {
+      font-size: 28px;
+      line-height: 1.25;
+      margin-left: 60px;
+    }
+
+    li {
+      margin-bottom: 14px;
+      padding-left: 6px;
+    }
+
+    .book-title {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bookstore Inventory</h1>
+  <ul id="inventoryList"></ul>
+
+  <script>
+    // Purpose: Store the bookstore inventory in JSON-style JavaScript data for client-side use.
+    const bookstoreInventory = {
+      books: [
+        {
+          title: "The Great Gatsby",
+          author: {
+            firstName: "F. Scott",
+            lastName: "Fitzgerald"
+          },
+          publicationYear: 1925,
+          details: {
+            publisher: "Charles Scribner's Sons",
+            pageCount: 218
+          },
+          available: true
+        },
+        {
+          title: "To Kill a Mockingbird",
+          author: {
+            firstName: "Harper",
+            lastName: "Lee"
+          },
+          publicationYear: 1960,
+          details: {
+            publisher: "J.B. Lippincott & Co.",
+            pageCount: 281
+          },
+          available: true
+        },
+        {
+          title: "1984",
+          author: {
+            firstName: "George",
+            lastName: "Orwell"
+          },
+          publicationYear: 1949,
+          details: {
+            publisher: "Secker & Warburg",
+            pageCount: 328
+          },
+          available: false
+        }
+      ]
+    };
+
+    // Purpose: Convert the JSON structure into visible HTML so the client can display inventory data.
+    function renderBookstoreInventory(inventory) {
+      const inventoryList = document.getElementById("inventoryList");
+
+      inventory.books.forEach(function(book) {
+        const listItem = document.createElement("li");
+        const availabilityText = book.available ? "Yes" : "No";
+
+        listItem.innerHTML = `
+          <span class="book-title">${book.title}</span><br>
+          Author: ${book.author.firstName} ${book.author.lastName}<br>
+          Publication Year: ${book.publicationYear}<br>
+          Publisher: ${book.details.publisher}<br>
+          Page Count: ${book.details.pageCount}<br>
+          Available: ${availabilityText}
+        `;
+
+        inventoryList.appendChild(listItem);
+      });
+    }
+
+    renderBookstoreInventory(bookstoreInventory);
+  </script>
+</body>
+</html>

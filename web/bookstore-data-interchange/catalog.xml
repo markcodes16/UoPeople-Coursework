@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Purpose: This XML document provides sample bookstore catalog data that conforms
+  to catalog.xsd and uses the bookstore namespace for its custom vocabulary.
+-->
+<bk:catalog xmlns:bk="http://example.com/bookstore/catalog"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://example.com/bookstore/catalog catalog.xsd">
+
+  <bk:book id="B001" available="true">
+    <bk:title>
+      <bk:name>The Great Gatsby</bk:name>
+      <bk:publicationYear>1925</bk:publicationYear>
+    </bk:title>
+    <bk:author>
+      <bk:firstName>F. Scott</bk:firstName>
+      <bk:lastName>Fitzgerald</bk:lastName>
+    </bk:author>
+  </bk:book>
+
+  <bk:book id="B002" available="true">
+    <bk:title>
+      <bk:name>To Kill a Mockingbird</bk:name>
+      <bk:publicationYear>1960</bk:publicationYear>
+    </bk:title>
+    <bk:author>
+      <bk:firstName>Harper</bk:firstName>
+      <bk:lastName>Lee</bk:lastName>
+    </bk:author>
+  </bk:book>
+
+  <bk:book id="B003" available="false">
+    <bk:title>
+      <bk:name>1984</bk:name>
+      <bk:publicationYear>1949</bk:publicationYear>
+    </bk:title>
+    <bk:author>
+      <bk:firstName>George</bk:firstName>
+      <bk:lastName>Orwell</bk:lastName>
+    </bk:author>
+  </bk:book>
+
+</bk:catalog>

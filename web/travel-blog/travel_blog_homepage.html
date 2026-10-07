@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog Home Page</title>
+  <style>
+    /* Page styling keeps the layout readable and colorful. */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg, #f7fbff 0%, #eef5fb 100%);
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2.3rem;
+      color: #0f172a;
+    }
+
+    .intro {
+      margin-bottom: 25px;
+      color: #475569;
+    }
+
+    /* Number blocks serve as internal navigation links. */
+    .number-blocks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 25px 0 35px;
+    }
+
+    .number-block {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.16);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    }
+
+    .number-block:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+      opacity: 0.95;
+    }
+
+    .one { background: #f97316; }
+    .two { background: #3b82f6; }
+    .three { background: #22c55e; }
+    .four { background: #facc15; color: #1f2937; }
+
+    /* Each destination section is highlighted when jumped to. */
+    .continent-section {
+      background: #ffffff;
+      border: 1px solid #dbeafe;
+      border-left: 8px solid #60a5fa;
+      border-radius: 14px;
+      padding: 24px;
+      margin: 0 0 28px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+      scroll-margin-top: 20px;
+    }
+
+    .continent-section:target {
+      outline: 3px solid #f59e0b;
+      background: #fffdf5;
+    }
+
+    .continent-title {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #0f172a;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 8px;
+    }
+
+    /* Ordered list headings are the countries. */
+    .country-list > li {
+      margin-bottom: 14px;
+      color: #7c2d12;
+      font-weight: bold;
+    }
+
+    /* Unordered list items are the cities. */
+    .city-list {
+      margin-top: 6px;
+    }
+
+    .city-list li {
+      color: #1d4ed8;
+      font-weight: normal;
+      margin: 4px 0;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #0f766e;
+      font-weight: bold;
+    }
+
+    .back-to-top:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="top">
+    <h1>Travel Blog</h1>
+    <p class="intro">Click a colorful number to jump to a continent and view its countries and cities in a nested list.</p>
+
+    <!-- Internal links connect each number block to a specific section on the page. -->
+    <div class="number-blocks">
+      <a class="number-block one" href="#europe" title="Jump to Europe">1</a>
+      <a class="number-block two" href="#asia" title="Jump to Asia">2</a>
+      <a class="number-block three" href="#america" title="Jump to America">3</a>
+      <a class="number-block four" href="#africa" title="Jump to Africa">4</a>
+    </div>
+
+    <!-- Section 1: Europe -->
+    <section id="europe" class="continent-section">
+      <h2 class="continent-title">Destination 1: Europe</h2>
+      <ol class="country-list">
+        <li>France
+          <ul class="city-list">
+            <li>Paris</li>
+            <li>Nice</li>
+            <li>Marseille</li>
+          </ul>
+        </li>
+        <li>Italy
+          <ul class="city-list">
+            <li>Rome</li>
+            <li>Florence</li>
+            <li>Venice</li>
+          </ul>
+        </li>
+        <li>Greece
+          <ul class="city-list">
+            <li>Athens</li>
+            <li>Thessaloniki</li>
+            <li>Santorini</li>
+          </ul>
+        </li>
+      </ol>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </section>
+
+    <!-- Section 2: Asia -->
+    <section id="asia" class="continent-section">
+      <h2 class="continent-title">Destination 2: Asia</h2>
+      <ol class="country-list">
+        <li>Japan
+          <ul class="city-list">
+            <li>Tokyo</li>
+            <li>Kyoto</li>
+            <li>Osaka</li>
+          </ul>
+        </li>
+        <li>China
+          <ul class="city-list">
+            <li>Beijing</li>
+            <li>Shanghai</li>
+            <li>Xi'an</li>
+          </ul>
+        </li>
+        <li>India
+          <ul class="city-list">
+            <li>New Delhi</li>
+            <li>Mumbai</li>
+            <li>Jaipur</li>
+          </ul>
+        </li>
+      </ol>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </section>
+
+    <!-- Section 3: America -->
+    <section id="america" class="continent-section">
+      <h2 class="continent-title">Destination 3: America</h2>
+      <ol class="country-list">
+        <li>USA
+          <ul class="city-list">
+            <li>New York City</li>
+            <li>Los Angeles</li>
+            <li>Chicago</li>
+          </ul>
+        </li>
+        <li>Brazil
+          <ul class="city-list">
+            <li>Rio de Janeiro</li>
+            <li>Sao Paulo</li>
+            <li>Salvador</li>
+          </ul>
+        </li>
+        <li>Canada
+          <ul class="city-list">
+            <li>Toronto</li>
+            <li>Vancouver</li>
+            <li>Montreal</li>
+          </ul>
+        </li>
+      </ol>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </section>
+
+    <!-- Section 4: Africa -->
+    <section id="africa" class="continent-section">
+      <h2 class="continent-title">Destination 4: Africa</h2>
+      <ol class="country-list">
+        <li>South Africa
+          <ul class="city-list">
+            <li>Cape Town</li>
+            <li>Johannesburg</li>
+            <li>Durban</li>
+          </ul>
+        </li>
+        <li>Egypt
+          <ul class="city-list">
+            <li>Cairo</li>
+            <li>Luxor</li>
+            <li>Sharm El Sheikh</li>
+          </ul>
+        </li>
+        <li>Morocco
+          <ul class="city-list">
+            <li>Marrakech</li>
+            <li>Casablanca</li>
+            <li>Fez</li>
+          </ul>
+        </li>
+      </ol>
+      <a class="back-to-top" href="#top">Back to top</a>
+    </section>
+  </div>
+</body>
+</html>

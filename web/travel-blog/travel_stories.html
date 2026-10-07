@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Stories</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2.4rem;
+      color: #0f172a;
+    }
+
+    .lead {
+      color: #475569;
+      margin-bottom: 24px;
+    }
+
+    /* Table styling improves readability and meets the rubric requirements. */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border: 4px solid #2563eb;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      margin-bottom: 38px;
+    }
+
+    th, td {
+      border: 2px solid #60a5fa;
+      padding: 16px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    th {
+      background: #dbeafe;
+      color: #0f172a;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    tbody tr:nth-child(odd) {
+      background: #f8fbff;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #eff6ff;
+    }
+
+    .destination-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #7c2d12;
+    }
+
+    /* Graphic styling adds a hover opacity effect to the attraction artwork. */
+    .attraction-graphic {
+      width: 220px;
+      height: 160px;
+      border: 3px solid #f59e0b;
+      border-radius: 12px;
+      overflow: hidden;
+      display: inline-block;
+      transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .attraction-graphic:hover {
+      opacity: 0.68;
+      transform: scale(1.03);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .caption {
+      display: block;
+      margin-top: 8px;
+      color: #334155;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .details {
+      display: grid;
+      gap: 22px;
+    }
+
+    .story-card {
+      background: #ffffff;
+      border-left: 8px solid #14b8a6;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+      scroll-margin-top: 18px;
+    }
+
+    .story-card:target {
+      outline: 3px solid #f59e0b;
+      background: #fffbeb;
+    }
+
+    .story-card h2 {
+      margin-top: 0;
+      color: #0f172a;
+    }
+
+    .back-link {
+      color: #0f766e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1 id="top">Travel Destinations</h1>
+    <p class="lead">Click an attraction image in the table to jump to a matching travel story at the bottom of the page.</p>
+
+    <!-- Each graphic is wrapped inside an anchor so it jumps to its related information section. -->
+    <table>
+      <thead>
+        <tr>
+          <th>Destination</th>
+          <th>Attraction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="destination-name">Paris</td>
+          <td>
+            <a href="#eiffel-story" aria-label="Jump to Eiffel Tower story">
+              <svg class="attraction-graphic" viewBox="0 0 300 220" role="img" aria-labelledby="eiffelTitle">
+                <title id="eiffelTitle">Illustration of the Eiffel Tower</title>
+                <rect width="300" height="220" fill="#d9ecff" />
+                <rect y="160" width="300" height="60" fill="#87c07a" />
+                <polygon points="150,20 110,160 190,160" fill="#6b4f3a" />
+                <rect x="142" y="20" width="16" height="140" fill="#7b5a42" />
+                <line x1="125" y1="70" x2="175" y2="70" stroke="#c9b18a" stroke-width="4" />
+                <line x1="118" y1="95" x2="182" y2="95" stroke="#c9b18a" stroke-width="4" />
+                <line x1="112" y1="120" x2="188" y2="120" stroke="#c9b18a" stroke-width="4" />
+                <path d="M118 160 Q150 120 182 160" fill="none" stroke="#3b2b1f" stroke-width="8" />
+                <text x="150" y="205" font-family="Arial" font-size="24" text-anchor="middle" fill="#23395d">Eiffel Tower</text>
+              </svg>
+              <span class="caption">Eiffel Tower</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="destination-name">Rome</td>
+          <td>
+            <a href="#colosseum-story" aria-label="Jump to Colosseum story">
+              <svg class="attraction-graphic" viewBox="0 0 300 220" role="img" aria-labelledby="colosseumTitle">
+                <title id="colosseumTitle">Illustration of the Colosseum</title>
+                <rect width="300" height="220" fill="#f7efe1" />
+                <rect y="170" width="300" height="50" fill="#d0b48f" />
+                <ellipse cx="150" cy="110" rx="95" ry="65" fill="#c8a97e" stroke="#8b6b47" stroke-width="6" />
+                <ellipse cx="150" cy="110" rx="55" ry="35" fill="#f7efe1" stroke="#8b6b47" stroke-width="6" />
+                <g fill="#7f5a3b">
+                  <rect x="72" y="88" width="18" height="38" rx="9" />
+                  <rect x="102" y="75" width="18" height="50" rx="9" />
+                  <rect x="132" y="68" width="18" height="57" rx="9" />
+                  <rect x="162" y="68" width="18" height="57" rx="9" />
+                  <rect x="192" y="75" width="18" height="50" rx="9" />
+                  <rect x="222" y="88" width="18" height="38" rx="9" />
+                </g>
+                <text x="150" y="205" font-family="Arial" font-size="24" text-anchor="middle" fill="#5a3f2c">Colosseum</text>
+              </svg>
+              <span class="caption">Colosseum</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="destination-name">New York</td>
+          <td>
+            <a href="#liberty-story" aria-label="Jump to Statue of Liberty story">
+              <svg class="attraction-graphic" viewBox="0 0 300 220" role="img" aria-labelledby="libertyTitle">
+                <title id="libertyTitle">Illustration of the Statue of Liberty</title>
+                <rect width="300" height="220" fill="#dff6ff" />
+                <rect y="175" width="300" height="45" fill="#7db37d" />
+                <rect x="110" y="155" width="80" height="20" fill="#7a7a7a" />
+                <rect x="125" y="135" width="50" height="20" fill="#8c8c8c" />
+                <rect x="140" y="65" width="22" height="70" fill="#6aa085" />
+                <rect x="132" y="90" width="38" height="18" fill="#6aa085" />
+                <circle cx="151" cy="52" r="16" fill="#78b59b" />
+                <polygon points="151,22 159,42 143,42" fill="#f4b400" />
+                <rect x="165" y="48" width="10" height="45" transform="rotate(-20 170 70)" fill="#78b59b" />
+                <rect x="178" y="18" width="6" height="38" fill="#6b4b2a" />
+                <polygon points="181,14 172,25 190,25" fill="#ffcc4d" />
+                <text x="150" y="205" font-family="Arial" font-size="22" text-anchor="middle" fill="#2a5674">Statue of Liberty</text>
+              </svg>
+              <span class="caption">Statue of Liberty</span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Travel story sections provide the information reached by clicking each image. -->
+    <div class="details">
+      <section id="eiffel-story" class="story-card">
+        <h2>Paris - Eiffel Tower</h2>
+        <p>The Eiffel Tower is one of the most recognizable landmarks in the world. It offers incredible city views, especially at sunset, and it is a perfect stop for visitors interested in architecture, photography, and French culture.</p>
+        <a class="back-link" href="#top">Back to table</a>
+      </section>
+
+      <section id="colosseum-story" class="story-card">
+        <h2>Rome - Colosseum</h2>
+        <p>The Colosseum reflects the engineering skill of ancient Rome. Travelers often visit it to learn about Roman history, gladiator contests, and the importance of the empire in shaping European civilization.</p>
+        <a class="back-link" href="#top">Back to table</a>
+      </section>
+
+      <section id="liberty-story" class="story-card">
+        <h2>New York - Statue of Liberty</h2>
+        <p>The Statue of Liberty symbolizes freedom and opportunity. It remains one of New York City's most popular attractions and is closely connected with the history of immigration in the United States.</p>
+        <a class="back-link" href="#top">Back to table</a>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
