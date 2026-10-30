@@ -26,17 +26,26 @@ public class EmployeeService {
     * @throws IOException if the file cannot be read
     */
    public static List<Employee> loadFromCsv(String filename) throws IOException {
-       return Files.lines(Paths.get(filename))
-               .map(line -> {
-                   // Example line: "John Doe,28,Engineering,75000"
-                   String[] tokens = line.split(",");
-                   String name = tokens[0].trim();
-                   int age = Integer.parseInt(tokens[1].trim());
-                   String dept = tokens[2].trim();
-                   double salary = Double.parseDouble(tokens[3].trim());
-                   return new Employee(name, age, dept, salary);
-               })
-               .collect(Collectors.toList());
+       try (var lines = Files.lines(Paths.get(filename))) {
+           return lines.filter(line -> !line.isBlank())
+                   .map(line -> {
+                       // Coursework CSV format: name,age,department,salary (no quoted commas).
+                       String[] tokens = line.split(",", -1);
+                       if (tokens.length != 4) {
+                           throw new IllegalArgumentException("Expected four CSV columns: " + line);
+                       }
+                       String name = tokens[0].trim();
+                       int age = Integer.parseInt(tokens[1].trim());
+                       String dept = tokens[2].trim();
+                       double salary = Double.parseDouble(tokens[3].trim());
+                       if (name.isEmpty() || dept.isEmpty() || age < 0
+                               || !Double.isFinite(salary) || salary < 0) {
+                           throw new IllegalArgumentException("Invalid employee CSV row: " + line);
+                       }
+                       return new Employee(name, age, dept, salary);
+                   })
+                   .collect(Collectors.toList());
+       }
    }
 
 
